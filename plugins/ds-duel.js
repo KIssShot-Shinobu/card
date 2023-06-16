@@ -1,37 +1,46 @@
 const handler = async (m, { conn }) => {
-            
-   //const cardImageUrl = 'https://i.postimg.cc/TYzzD97s/Screenshot-9.png';
-   const caption = `Group 1
-Rounde 5
+  //const cardImageUrl = 'https://i.postimg.cc/TYzzD97s/Screenshot-9.png';
+  const caption = `Jadwal Battle Of Waifu
+Day 1
 
-#5-1
-[DS] Arcy vs {(Hilman)}
+Grup A
+1.Ghost Belle vs Ash Blossom
+2.Ghost Ogre vs Ghost Reaper
 
-#5-2
-Reizee vs Alyzter
+Group B
+1.Daki vs Ghost Sister
+2.Yuki Ona vs Ghost Mourner
 
-#5-3
-[DS] Misplay vs [DS]LAZYLYNX 
+Group C
+1.Kagari vs Underwrold Goddes
+2.Rulkalos vs Lovely Labrynt
 
-#5-4
-[DS] Ayzeo vs [DS]ZarC 
+Group D
+1.Dark Magician Girl vs Masquerena
+2.Appolousa vs Selene
 
-#5-5
-[DS] Sybe vs Ikan 
+Group E
+1.Every vs Verre
+2.Puddingcess vs Luna
 
-#5-6
-[DS]Z3R0 vs [DS]Antun
+Group F
+1.Springgas Kitt vs Iris Swordsoul
+2.Ecclesia vs Laundry Dragonmaid
 
-#5-7
-Nirmana vs [DS] Uru
+Group G
+1.Blazing Cartesia vs Marincess
+2.Rikka Queen vs Silent Magician
+
+Group H
+1.Spiritual Beast Tamer Winda vs Darklord ixchel
+2.Winda Gusto vs Winter Painter
 `;
 
-     await m.reply(caption)
-    //await conn.sendFile(m.chat, cardImageUrl, 'card_image.png', caption, m);
-  
+  await m.reply(caption);
+  //await conn.sendFile(m.chat, cardImageUrl, 'card_image.png', caption, m);
 };
 
 handler.tags = ['tools'];
-handler.command = /^(duelg1)$/i;
+handler.command = /^(duel)$/i;
 
 export default handler;

@@ -1,7 +1,6 @@
 const handler = async (m, { conn }) => {
-            
-   const cardImageUrl = 'https://iili.io/H44A0wN.png';
-   const caption = `Group 1
+  const cardImageUrl = 'https://iili.io/H44A0wN.png';
+  const caption = `Group 1
 
 1. [DS]ZarC @Arman DS 
 2. Nirmana @~Nirmana Andersen 
@@ -36,9 +35,7 @@ Group 2
 14. [DS]Shthana @~Nanta Sony
 `;
 
-
-    await conn.sendFile(m.chat, cardImageUrl, 'card_image.png', caption, m);
-  
+  await conn.sendFile(m.chat, cardImageUrl, 'card_image.png', caption, m);
 };
 
 handler.tags = ['tools'];

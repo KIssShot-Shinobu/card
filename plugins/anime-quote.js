@@ -19,11 +19,17 @@ const handler = async (m, { conn }) => {
       headerType: 1,
     };
 
-    await conn.sendMessage(m.chat, buttonMessage, MessageType.buttons, { quoted: m });
-
+    await conn.sendMessage(m.chat, buttonMessage, MessageType.buttons, {
+      quoted: m,
+    });
   } catch (error) {
     console.log(error);
-    await conn.sendMessage(m.chat, 'Terjadi kesalahan dalam mendapatkan quote.', MessageType.text, { quoted: m });
+    await conn.sendMessage(
+      m.chat,
+      'Terjadi kesalahan dalam mendapatkan quote.',
+      MessageType.text,
+      { quoted: m }
+    );
   }
 };
 

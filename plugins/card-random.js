@@ -13,19 +13,27 @@ const handler = async (m, { conn }) => {
       const cardRace = cardData.race;
       const cardImage = cardData.card_images[0].image_url;
 
-//       const message = `Card Name: ${cardName}
-// Card Type: ${cardType}
-// Card Race: ${cardRace}
-// Card Effect: ${cardEffect}
-// `;
+      //       const message = `Card Name: ${cardName}
+      // Card Type: ${cardType}
+      // Card Race: ${cardRace}
+      // Card Effect: ${cardEffect}
+      // `;
 
       await conn.sendFile(m.chat, cardImage, 'card_image.png', '', m);
     } else {
-      await conn.sendMessage(m.chat, { text: 'Failed to fetch a random card.' }, { quoted: m });
+      await conn.sendMessage(
+        m.chat,
+        { text: 'Failed to fetch a random card.' },
+        { quoted: m }
+      );
     }
   } catch (error) {
     console.log(error);
-    await conn.sendMessage(m.chat, { text: 'An error occurred while fetching the random card.' }, { quoted: m });
+    await conn.sendMessage(
+      m.chat,
+      { text: 'An error occurred while fetching the random card.' },
+      { quoted: m }
+    );
   }
 };
 

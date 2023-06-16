@@ -8,7 +8,11 @@ const handler = async (m, { conn }) => {
     await conn.sendFile(m.chat, imageUrl, 'sfw_image.png', '', m);
   } catch (error) {
     console.log(error);
-    await conn.sendMessage(m.chat, 'An error occurred while fetching the SFW image.', { quoted: m });
+    await conn.sendMessage(
+      m.chat,
+      'An error occurred while fetching the SFW image.',
+      { quoted: m }
+    );
   }
 };
 

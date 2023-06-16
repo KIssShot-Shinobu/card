@@ -8,7 +8,11 @@ const handler = async (m, { conn }) => {
     await conn.sendFile(m.chat, gifUrl, 'blush_gif.gif', '', m);
   } catch (error) {
     console.log(error);
-    await conn.sendMessage(m.chat, 'Terjadi kesalahan dalam mendapatkan gambar Blush.', { quoted: m });
+    await conn.sendMessage(
+      m.chat,
+      'Terjadi kesalahan dalam mendapatkan gambar Blush.',
+      { quoted: m }
+    );
   }
 };
 

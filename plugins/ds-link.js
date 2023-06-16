@@ -9,7 +9,7 @@ const handler = async (m, { conn }) => {
     if (cardData) {
       const cardImage = cardData.card_images[0].image_url;
 
-       const generalDS = 'https://chat.whatsapp.com/F4b37sylfaT2wry6STXDzx';
+      const generalDS = 'https://chat.whatsapp.com/F4b37sylfaT2wry6STXDzx';
       const discordDS = 'https://discord.gg/FEZNRQUv9H';
       const youtubeDS = 'https://www.youtube.com/@duellinksC';
       const instagram = 'https://www.instagram.com/duelstandbyofficial/';
@@ -29,11 +29,19 @@ United & Strong`;
 
       await conn.sendFile(m.chat, cardImage, 'card_image.png', messages, m);
     } else {
-      await conn.sendMessage(m.chat, { text: 'Failed to fetch a random card.' }, { quoted: m });
+      await conn.sendMessage(
+        m.chat,
+        { text: 'Failed to fetch a random card.' },
+        { quoted: m }
+      );
     }
   } catch (error) {
     console.log(error);
-    await conn.sendMessage(m.chat, { text: 'An error occurred while fetching the random card.' }, { quoted: m });
+    await conn.sendMessage(
+      m.chat,
+      { text: 'An error occurred while fetching the random card.' },
+      { quoted: m }
+    );
   }
 };
 

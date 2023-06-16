@@ -1,6 +1,5 @@
 const handler = async (m, { conn }) => {
-            
-   const caption = `Bot Ini Free
+  const caption = `Bot Ini Free
 Silahkan di pakai dan semoga membantu
 
 jika Ingin doneate untuk server 
@@ -11,8 +10,7 @@ Ovo : 081515680656 / A/N Rifaldi
 
 `;
 
-     await m.reply(caption)
-    
+  await m.reply(caption);
 };
 
 handler.tags = ['tools'];

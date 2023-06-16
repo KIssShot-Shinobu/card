@@ -12,7 +12,8 @@
 	"scripts": {
 		"start": "node index.js",
 		"test": "node test.js",
-		"test2": "nodemon index.js"
+		"test2": "nodemon index.js",
+		"format": "prettier --write \"./plugins/**/*.js\""
 	},
 	"keywords": [
 		"termux-whatsapp-bot",
@@ -99,5 +100,8 @@
 		"wa-sticker-formatter": "^4.4.4",
 		"xfarr-api": "^2.0.0",
 		"yargs": "^17.7.2"
+	},
+	"devDependencies": {
+		"prettier": "^2.8.8"
 	}
 }
