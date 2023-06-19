@@ -1,4 +1,4 @@
-# Frock from Azami-bot
+# Fork from Azami-bot
 
 
 This Script is for everyone, original base by [`BochilGaming`](https://github.com/BochilGaming/games-wabot-md)
